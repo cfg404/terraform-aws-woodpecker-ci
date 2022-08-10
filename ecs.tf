@@ -31,7 +31,7 @@ resource "aws_ecs_cluster" "this" {
   }
 
   dynamic "setting" {
-    for_each = [var.cluster_settings]
+    for_each = try([var.cluster_settings], [])
 
     content {
       name  = setting.value.name
