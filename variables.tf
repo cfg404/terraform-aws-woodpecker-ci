@@ -5,19 +5,19 @@ variable "name" {
 }
 
 variable "cluster_configuration" {
-  default     = [{}]
+  default     = null
   type        = list(map(any))
   description = "A list of maps containing data used for logging configuration"
 }
 
 variable "cluster_settings" {
-  default     = {}
+  default     = null
   type        = map(any)
   description = "A map containing data used for the ECS cluster configuration"
 }
 
 variable "tags" {
-  default     = {}
+  default     = null
   type        = map(any)
   description = "A map containing all the tags that will be applied to the ECS cluster"
 }
