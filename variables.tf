@@ -6,7 +6,7 @@ variable "name" {
 
 variable "cluster_configuration" {
   default     = [{}]
-  type        = list[map]
+  type        = list(map(any))
   description = "A list of maps containing data used for logging configuration"
 }
 
